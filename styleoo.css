@@ -16,13 +16,14 @@ body {
 .container {
   width: 80%;
   margin-top: 40px;
-  margin-bottom: 20px;
+  margin-bottom: calc(100px + 20px); /* Add margin equal to height of footer */
   min-height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 
 h1 {
   text-align: center;
