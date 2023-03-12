@@ -16,8 +16,8 @@ body {
 .container {
   width: 80%;
   margin-top: 40px;
-  margin-bottom: calc(100px + 40px); /* Add margin equal to height of footer */
-  min-height: calc(100vh - 160px); /* Adjust min-height to account for margin and footer height */
+  margin-bottom: calc(100px + 20px); /* Add margin equal to height of footer */
+  min-height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -87,16 +87,21 @@ button[type=button]:hover {
   src: url("https://raw.githubusercontent.com/zezokam/Arabic-labor/main/Fonts/Khalid.ttf") format("truetype");
 }
 
+#result, button[type=button] {
+  font-family: "Khalid", serif;
+}
+
+
 footer {
   width: 100%;
-  background-color: gray;
+  background-color: #f1f1f1;
   padding: 20px 0;
   text-align: center;
-  position: relative; /* Set position to relative to allow for proper spacing */
-  margin-top: 40px; /* Increase margin to allow for proper spacing */
-  font-size: 12px; /* Decrease font size for smaller text */
+  position: absolute;
+  bottom: 0;
+  margin-top: 20px;
+  font-size: 10px;
   color: white;
-  clear: both; /* Add clear to ensure proper spacing and prevent overlap */
 }
 
 footer p {
@@ -104,11 +109,9 @@ footer p {
 }
 
 @media only screen and (max-width: 600px) {
-  form {
-    flex-direction: column;
+  .container {
+    margin-bottom: calc(120px + 20px); /* Add margin equal to height of footer and button */
   }
-  input[type=date],
-  input[type=number],
   button[type=button] {
     width: 100%;
   }
