@@ -64,7 +64,6 @@ function calculateGratuity() {
   }
 
   // Display result
-  var duration = yearsOfService + " " + yearsText + ", " + monthsOfService + " " + monthsText + ", " + daysOfService + " " + daysText;
-  var resultString = "The end of service gratuity: " + gratuityAmount.toFixed(3) + " OMR." + "<br>" + "Duration of service is: " + duration;
+  var resultString = "نهاية خدمتك ستحصل على: " + gratuityAmount.toFixed(3) + " ريال." + "<br>" + "مدة الخدمة: " + duration;
   document.getElementById("result").innerHTML = resultString;
 }
