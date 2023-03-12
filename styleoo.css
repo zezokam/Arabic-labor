@@ -35,7 +35,6 @@ form {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  flex-direction: column; /* add this line to stack the form items vertically */
 }
 
 label {
@@ -45,11 +44,12 @@ label {
 
 input[type=date],
 input[type=number] {
-  width: 100px;
+  width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-bottom: 10px;
+  display: block;
 }
 
 button[type=button] {
