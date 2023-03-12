@@ -10,20 +10,17 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .container {
   width: 80%;
   margin-top: 40px;
-  margin-bottom: calc(100px + 20px); /* Add margin equal to height of footer */
   min-height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-bottom: 100px;
 }
 
 h1 {
@@ -93,7 +90,7 @@ button[type=button]:hover {
   src: url("https://raw.githubusercontent.com/zezokam/Arabic-labor/main/Fonts/Khalid.ttf") format("truetype");
 }
 
-ffooter {
+footer {
   width: 100%;
   background-color: #616060;
   padding: 20px 0;
