@@ -65,6 +65,6 @@ function calculateGratuity() {
 
   // Display result
   var duration = yearsOfService + " " + yearsText + " و " + monthsOfService + " " + monthsText + " و " + daysOfService + " " + daysText;
-  var resultString = "قيمة المكافأة: " + gratuityAmount.toFixed(3) + " ريال." + "<br>" + "مدة الخدمة: " + duration;
+  var resultString = "قيمة المكافأة: " + gratuityAmount.toFixed(3) + " ريال" + "<br>" + "مدة الخدمة: " + duration;
   document.getElementById("result").innerHTML = resultString;
 }
