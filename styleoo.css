@@ -32,13 +32,12 @@ h1 {
 
 form {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 label {
-  margin-right: 10px;
   margin-bottom: 10px;
 }
 
@@ -49,7 +48,13 @@ input[type=number] {
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-bottom: 10px;
-  display: block;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 button[type=button] {
@@ -68,7 +73,7 @@ button[type=button]:hover {
 
 #result {
   margin-top: 20px;
-  display: 0;
+  display: none;
   text-align: center;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -77,7 +82,7 @@ button[type=button]:hover {
 
 #result p {
   color: blue;
-  font-family: Arial, sans-serif;
+  font-family: "Khalid", serif;
   font-weight: bold;
   font-size: 16px;
 }
@@ -86,11 +91,6 @@ button[type=button]:hover {
   font-family: "Khalid";
   src: url("https://raw.githubusercontent.com/zezokam/Arabic-labor/main/Fonts/Khalid.ttf") format("truetype");
 }
-
-#result, button[type=button] {
-  font-family: "Khalid", serif;
-}
-
 
 footer {
   width: 100%;
@@ -109,10 +109,16 @@ footer p {
 }
 
 @media only screen and (max-width: 600px) {
-  .container {
-    margin-bottom: calc(120px + 20px); /* Add margin equal to height of footer and button */
+  form {
+    flex-direction: column;
   }
+  input[type=date],
+  input[type=number],
   button[type=button] {
     width: 100%;
+  }
+  
+  .button-container {
+    flex-direction: column;
   }
 }
