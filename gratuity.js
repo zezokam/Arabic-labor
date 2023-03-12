@@ -4,7 +4,7 @@ function calculateGratuity() {
   var endDate = new Date(document.getElementById("endDate").value);
   var lastBasicWage = parseFloat(document.getElementById("lastBasicWage").value).toFixed(3);
 
-  // Calculate years and months of service
+  // Calculate years, months, and days of service
   var yearsOfService = endDate.getFullYear() - startDate.getFullYear();
   var monthsOfService = endDate.getMonth() - startDate.getMonth();
   var daysOfService = endDate.getDate() - startDate.getDate();
@@ -31,8 +31,40 @@ function calculateGratuity() {
     gratuityAmount = (dailyWage * 15 * 3) + (dailyWage * 30 * (yearsOfService - 3)) + (dailyWage * monthsOfService * 30 / 12) + (dailyWage * daysOfService / 12);
   }
 
+  // Format duration of service
+  var yearsText, monthsText, daysText;
+  if (yearsOfService == 1) {
+    yearsText = "سنة";
+  } else if (yearsOfService == 2) {
+    yearsText = "سنتين";
+  } else if (yearsOfService >= 3 && yearsOfService <= 10) {
+    yearsText = "سنوات";
+  } else {
+    yearsText = "سنة";
+  }
+
+  if (monthsOfService == 1) {
+    monthsText = "شهر";
+  } else if (monthsOfService == 2) {
+    monthsText = "شهرين";
+  } else if (monthsOfService >= 3 && monthsOfService <= 10) {
+    monthsText = "أشهر";
+  } else {
+    monthsText = "شهر";
+  }
+
+  if (daysOfService == 1) {
+    daysText = "يوم";
+  } else if (daysOfService == 2) {
+    daysText = "يومين";
+  } else if (daysOfService >= 3 && daysOfService <= 10) {
+    daysText = "أيام";
+  } else {
+    daysText = "يوم";
+  }
+
   // Display result
-  var duration = yearsOfService + " years, " + monthsOfService + " months, " + daysOfService + " days";
+  var duration = yearsOfService + " " + yearsText + ", " + monthsOfService + " " + monthsText + ", " + daysOfService + " " + daysText;
   var resultString = "The end of service gratuity: " + gratuityAmount.toFixed(3) + " OMR." + "<br>" + "Duration of service is: " + duration;
   document.getElementById("result").innerHTML = resultString;
 }
