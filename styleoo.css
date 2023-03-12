@@ -35,6 +35,7 @@ form {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  flex-direction: column; /* add this line to stack the form items vertically */
 }
 
 label {
