@@ -60,6 +60,7 @@ input[type=number] {
 button[type=button] {
   background-color: #4CAF50;
   color: white;
+  font-family: "Khalid", serif;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
