@@ -2,7 +2,7 @@ function calculateGratuity() {
   // Get input values
   var startDate = new Date(document.getElementById("startDate").value);
   var endDate = new Date(document.getElementById("endDate").value);
-  var lastBasicWage = parseFloat(document.getElementById("lastBasicWage").value).toFixed(3);
+  var lastBasicWage = parseFloat(document.getElementById("lastBasicWage").value);
 
   // Calculate years, months, and days of service
   var yearsOfService = endDate.getFullYear() - startDate.getFullYear();
@@ -65,5 +65,6 @@ function calculateGratuity() {
 
   // Display result
   var duration = yearsOfService + " " + yearsText + " و " + monthsOfService + " " + monthsText + " و " + daysOfService + " " + daysText;
-  var resultString = "قيمة المكافأة:" + gratuityAmount.toFixed(3) + " ريال." + "<br>" + "مدة الخدمة: " + duration;
+  var resultString = "قيمة المكافأة: " + gratuityAmount.toFixed(3) + " ريال." + "<br>" + "مدة الخدمة: " + duration;
   document.getElementById("result").innerHTML = resultString;
+}
