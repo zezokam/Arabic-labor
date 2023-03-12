@@ -10,15 +10,13 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
-
 
 .container {
   width: 80%;
   margin-top: 40px;
-  min-height: calc(100vh - 100px);
+  margin-bottom: 80px;
+  min-height: calc(100vh - 180px);
   display: flex;
   flex-direction: column;
   justify-content: center;
