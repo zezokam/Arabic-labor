@@ -21,8 +21,13 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-bottom: 80px; /* Add margin to match footer height */
+  /* New rules for centering */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
 
 h1 {
   text-align: center;
