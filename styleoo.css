@@ -96,7 +96,6 @@ button[type=button]:hover {
 footer {
   width: 100%;
   background-color: #616060;
-  padding: 20px 0;
   text-align: center;
   position: fixed;
   bottom: 0;
@@ -107,6 +106,7 @@ footer {
 
 footer p {
   margin: 0;
+  padding: 20px 0;
 }
 
 @media only screen and (max-width: 600px) {
