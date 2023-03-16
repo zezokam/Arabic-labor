@@ -68,3 +68,11 @@ function calculateGratuity() {
   var resultString = "قيمة المكافأة: " + gratuityAmount.toFixed(3) + " ريال" + "<br>" + "مدة الخدمة: " + duration;
   document.getElementById("result").innerHTML = resultString;
 }
+
+function changeLanguage() {
+  // Toggle language
+  var languageButton = document.getElementById("languageButton");
+  
+  // Redirect to GitHub repository
+  window.location.href = "https://zezokam.github.io/labor/";
+}
