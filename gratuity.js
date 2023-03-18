@@ -73,6 +73,7 @@ function changeLanguage() {
   // Toggle language
   var languageButton = document.getElementById("languageButton");
   
-  // Redirect to GitHub repository
-  window.location.href = "https://zezokam.github.io/labor/";
+  // Redirect to index.html page
+  window.location.href = "en.html";
 }
+
